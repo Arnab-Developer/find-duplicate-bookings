@@ -1,0 +1,1 @@
+Sample console application with asp.net core hosting (with DI, logging, configuration).

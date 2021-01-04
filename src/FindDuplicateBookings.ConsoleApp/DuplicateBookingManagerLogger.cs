@@ -6,7 +6,10 @@ using System.Linq;
 
 namespace FindDuplicateBookings.ConsoleApp
 {
-    internal static class DuplicateBookingControllerLogger
+    /// <summary>
+    /// Class for duplicate booking manager logger.
+    /// </summary>
+    internal static class DuplicateBookingManagerLogger
     {
         private static readonly Action<ILogger, string, Exception> _deletingDuplicateBooking = LoggerMessage.Define<string>(
             LogLevel.Information,
@@ -18,6 +21,11 @@ namespace FindDuplicateBookings.ConsoleApp
             new EventId(1, nameof(DuplicateBookingsError)),
             "Duplicate bookings error:");
 
+        /// <summary>
+        /// Log duplicate bookings which are found and deleted.
+        /// </summary>
+        /// <param name="logger">Logger to log duplicate bookings.</param>
+        /// <param name="bookings">Duplicate bookings to log.</param>
         public static void DeletingDuplicateBookings(this ILogger logger, IEnumerable<Booking> bookings)
         {
             var bookingLogString = $"{bookings.Count()}\n\n";
@@ -28,6 +36,11 @@ namespace FindDuplicateBookings.ConsoleApp
             _deletingDuplicateBooking(logger, bookingLogString, null);
         }
 
+        /// <summary>
+        /// Log about duplicate booking deleting error.
+        /// </summary>
+        /// <param name="logger">Logger to log error.</param>
+        /// <param name="ex">Exception to log.</param>
         public static void DuplicateBookingsError(this ILogger logger, Exception ex)
         {
             _duplicateBookingsError(logger, ex);

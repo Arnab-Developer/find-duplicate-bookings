@@ -1,1 +1,1 @@
-Sample console application with asp.net core hosting (with DI, logging, configuration).
+Sample background task application with asp.net core hosting (with DI, logging, configuration).

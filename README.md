@@ -1,6 +1,6 @@
 # Find duplicate bookings
 
-![.NET](https://github.com/Arnab-Developer/find-duplicate-bookings/workflows/.NET/badge.svg?branch=main)
+[![CI](https://github.com/Arnab-Developer/find-duplicate-bookings/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Arnab-Developer/find-duplicate-bookings/actions/workflows/dotnet.yml)
 
 Demo background task application with .NET (with DI, logging, configuration).
 

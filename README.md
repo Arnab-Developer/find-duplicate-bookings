@@ -14,5 +14,5 @@ Demo background task application with .NET (with DI, logging, configuration).
 
 * .NET 5
 * C# 9
-* xunit for unit testing
+* xUnit for unit testing
 * Visual Studio 2019

@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.101
     - name: Restore dependencies
-      run: dotnet restore src\FindDuplicateBookings.sln
+      run: dotnet restore 'src/FindDuplicateBookings.sln'
     - name: Build
-      run: dotnet build src\FindDuplicateBookings.sln --configuration Release --no-restore
+      run: dotnet build 'src/FindDuplicateBookings.sln' --configuration Release --no-restore
     - name: Test
-      run: dotnet test src\FindDuplicateBookings.sln --no-build --verbosity normal --configuration Release /p:CollectCoverage=true
+      run: dotnet test 'src/FindDuplicateBookings.sln' --no-build --configuration Release
